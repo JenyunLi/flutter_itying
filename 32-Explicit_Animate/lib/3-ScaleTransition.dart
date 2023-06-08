@@ -56,46 +56,46 @@ class _MyHomePageState extends State<MyHomePage>
           title: const Text("Title"),
         ),
         body: Center(
-            child: Column(
-          children: [
-            ScaleTransition(
-              scale: _controller,
-              child: Container(
-                width: 200,
-                height: 200,
-                color: Colors.red,
+          child: Column(
+            children: [
+              ScaleTransition( // Tween 配置运动的參数
+                scale: _controller.drive(Tween(begin: 0.5, end: 1.2)),
+                child: Container(
+                  width: 200,
+                  height: 200,
+                  color: Colors.red,
+                ),
               ),
-            ),
-            const SizedBox(
-              height: 40,
-            ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: [
-                const SizedBox(height: 40),
-                ElevatedButton(
-                    onPressed: () {
-                      _controller.forward();
-                    },
-                    child: const Text("forward")),
-                ElevatedButton(
-                    onPressed: () {
-                      _controller.reverse();
-                    },
-                    child: const Text("reverse")),
-                ElevatedButton(
-                    onPressed: () {
-                      _controller.stop();
-                    },
-                    child: const Text("stop")),
-                ElevatedButton(
-                    onPressed: () {
-                      _controller.reset();
-                    },
-                    child: const Text("reset")),
-                    ],
-            )
-          ],
+              const SizedBox(
+                height: 40,
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  const SizedBox(height: 40),
+                  ElevatedButton(
+                      onPressed: () {
+                        _controller.forward();
+                      },
+                      child: const Text("forward")),
+                  ElevatedButton(
+                      onPressed: () {
+                        _controller.reverse();
+                      },
+                      child: const Text("reverse")),
+                  ElevatedButton(
+                      onPressed: () {
+                        _controller.stop();
+                      },
+                      child: const Text("stop")),
+                  ElevatedButton(
+                      onPressed: () {
+                        _controller.reset();
+                      },
+                      child: const Text("reset")),
+                      ],
+                )
+            ],
         )));
   }
 }
