@@ -18,16 +18,15 @@ class _HeroPageState extends State<HeroPage> {
       child: Hero(
         tag: widget.arguments["imageUrl"],
         child: Scaffold(
-        backgroundColor: Colors.black,
-        body: Center(
-          child: AspectRatio(
-            aspectRatio: 16 / 9,
-            child: 
+          backgroundColor: Colors.black,
+          body: Center(
+            child: AspectRatio(
+              aspectRatio: 16 / 9,
+              child:
                   Image.network("https://www.itying.com/images/flutter/2.png"),
-            
+            ),
           ),
         ),
-      ),
       ),
     );
   }

@@ -18,7 +18,7 @@ class _HeroPageState extends State<HeroPage> {
     super.initState();
     listData = widget.arguments["listData"];
     initialPage = widget.arguments["initialPage"] - 1;
-    currentPage=widget.arguments["initialPage"];
+    currentPage= initialPage+ 1;
   }
 
   @override
@@ -58,8 +58,8 @@ class _HeroPageState extends State<HeroPage> {
                   child: Container(
                     alignment: Alignment.center,
                     child: Text(
-                      "${currentPage}/${listData.length}",
-                      style: TextStyle(
+                      "$currentPage/${listData.length}",
+                      style: const TextStyle(
                           color: Colors.white,
                           fontSize: 16,
                           decoration: TextDecoration.none),
